@@ -1,0 +1,25 @@
+{
+  "name": "react-native-sane-defaults",
+  "version": "0.1.1",
+  "description": "creates a couple of sane default values for react-native apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawry/react-native-sane-defaults.git"
+  },
+  "keywords": [
+    "react-native",
+    "sane",
+    "defaults",
+    "stylesheets"
+  ],
+  "author": "hawry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hawry/react-native-sane-defaults/issues"
+  },
+  "homepage": "https://github.com/hawry/react-native-sane-defaults#readme"
+}
