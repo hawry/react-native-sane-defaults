@@ -60,14 +60,18 @@ const style = {
   defaultButton: {
     padding: metrics.basePadding,
     elevation: 4,
-    borderRadius: metrics.basePadding/2
+    borderRadius: metrics.basePadding/2,
+    backgroundColor: '#3D88EC',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
   roundedButton: {
     borderRadius: 50
   },
   defaultButtonText: {
     fontSize: size.regular,
-    textAlign: 'center'
+    fontWeight: 'bold',
+    color: '#ffffff',
   },
   successButton: {
     backgroundColor: colors.success.color
@@ -89,6 +93,12 @@ const style = {
   neutralButtonText: {
     color: colors.neutral.text,
     fontWeight: colors.neutral.weight
+  },
+  disabledButton: {
+    backgroundColor: '#F1F1F1'
+  },
+  disabledButtonText: {
+    color: '#C2C2C2'
   }
 }
 

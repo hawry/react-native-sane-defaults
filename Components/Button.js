@@ -5,7 +5,7 @@ import styles from '../style'
 
 class Button extends Component {
   render () {
-    const { onPress, title, success, danger, neutral, rounded, ...rest } = this.props
+    const { onPress, title, success, danger, neutral, rounded, disabled, left, right, ...rest } = this.props
     const buttonStyle = [styles.defaultButton]
     const textStyle = [styles.defaultButtonText]
 
@@ -13,10 +13,23 @@ class Button extends Component {
     if (danger) buttonStyle.push(styles.dangerButton) && textStyle.push(styles.dangerButtonText)
     if (neutral) buttonStyle.push(styles.neutralButton) && textStyle.push(styles.neutralButtonText)
     if (rounded) buttonStyle.push(styles.roundedButton)
+    if (disabled) buttonStyle.push(styles.disabledButton) && textStyle.push(styles.disabledButtonText)
 
     return (
-      <TouchableOpacity activeOpacity={0.8} onPress={onPress} style={buttonStyle}>
-        <Text style={textStyle}>{this.props.title}</Text>
+      <TouchableOpacity activeOpacity={0.8} onPress={onPress} style={buttonStyle} disabled={disabled}>
+        <Text style={textStyle}>
+          { left && (
+            this.props.left
+          )}
+        </Text>
+        <Text style={textStyle}>
+          {this.props.title}
+        </Text>
+        <Text style={textStyle}>
+          { right && (
+            this.props.right
+          )}
+        </Text>
       </TouchableOpacity>
     )
   }
