@@ -3,10 +3,14 @@ import { mScale } from './helpers'
 import { metrics, size } from './metrics'
 
 const style = {
+  topContainer: {
+    padding: 0,
+    margin: 0,
+    flex: 1
+  },
   container: {
     padding: metrics.basePadding,
-    margin: metrics.baseMargin,
-    backgroundColor: '#aeaeae'
+    margin: metrics.baseMargin
   },
   text: {
     fontSize: size.regular
