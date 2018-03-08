@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native'
 import { mScale } from './helpers'
 import { metrics, size } from './metrics'
+import { colors } from './colors'
 
 const style = {
   topContainer: {
     padding: 0,
     margin: 0,
-    flex: 1
+    flex: 1,
+    backgroundColor: '#ECF0F1'
   },
   container: {
     padding: metrics.basePadding,
@@ -54,6 +56,39 @@ const style = {
   },
   large: {
     fontSize: size.large
+  },
+  defaultButton: {
+    padding: metrics.basePadding,
+    elevation: 4,
+    borderRadius: metrics.basePadding/2
+  },
+  roundedButton: {
+    borderRadius: 50
+  },
+  defaultButtonText: {
+    fontSize: size.regular,
+    textAlign: 'center'
+  },
+  successButton: {
+    backgroundColor: colors.success.color
+  },
+  successButtonText: {
+    color: colors.success.text,
+    fontWeight: colors.success.weight
+  },
+  dangerButton: {
+    backgroundColor: colors.danger.color
+  },
+  dangerButtonText: {
+    color: colors.danger.text,
+    fontWeight: colors.danger.weight
+  },
+  neutralButton: {
+    backgroundColor: colors.neutral.color
+  },
+  neutralButtonText: {
+    color: colors.neutral.text,
+    fontWeight: colors.neutral.weight
   }
 }
 
