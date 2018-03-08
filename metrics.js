@@ -12,13 +12,13 @@ const metrics = {
 }
 
 const size = {
-  h1: mScale(36),
-  h2: mScale(32),
+  h1: mScale(32),
+  h2: mScale(30),
   h3: mScale(28),
-  h4: mScale(24),
-  h5: mScale(20),
-  h6: mScale(18),
-  regular: mScale(16),
+  h4: mScale(26),
+  h5: mScale(24),
+  h6: mScale(22),
+  regular: mScale(15),
   small: mScale(12),
   large: mScale(18)
 }
