@@ -4,9 +4,9 @@ import styles from '../style'
 
 class Text extends Component {
   render () {
-    const { h1, h2, h3, h4, h5, h6, title, subtitle, note, ...rest } = this.props
+    const { h1, h2, h3, h4, h5, h6, title, subtitle, note, style, ...rest } = this.props
 
-    const rawStyle = [styles.text]
+    const rawStyle = [styles.text, style]
     if (h1) rawStyle.push(styles.h1)
     if (h2) rawStyle.push(styles.h2)
     if (h3) rawStyle.push(styles.h3)
