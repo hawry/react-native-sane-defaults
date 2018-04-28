@@ -7,25 +7,25 @@ class Button extends Component {
   render () {
     const { onPress, title, success, danger, neutral, rounded, disabled, left, right, buttonStyle, textStyle, ...rest } = this.props
     const btnStyle = [styles.defaultButton, buttonStyle]
-    const textStyle = [styles.defaultButtonText, textStyle]
+    const txtStyle = [styles.defaultButtonText, textStyle]
 
-    if (success) btnStyle.push(styles.successButton) && textStyle.push(styles.successButtonText)
-    if (danger) btnStyle.push(styles.dangerButton) && textStyle.push(styles.dangerButtonText)
-    if (neutral) btnStyle.push(styles.neutralButton) && textStyle.push(styles.neutralButtonText)
+    if (success) btnStyle.push(styles.successButton) && txtStyle.push(styles.successButtonText)
+    if (danger) btnStyle.push(styles.dangerButton) && txtStyle.push(styles.dangerButtonText)
+    if (neutral) btnStyle.push(styles.neutralButton) && txtStyle.push(styles.neutralButtonText)
     if (rounded) btnStyle.push(styles.roundedButton)
-    if (disabled) btnStyle.push(styles.disabledButton) && textStyle.push(styles.disabledButtonText)
+    if (disabled) btnStyle.push(styles.disabledButton) && txtStyle.push(styles.disabledButtonText)
 
     return (
       <TouchableOpacity activeOpacity={0.8} onPress={onPress} style={btnStyle} disabled={disabled}>
-        <Text style={textStyle}>
+        <Text style={txtStyle}>
           { left && (
             this.props.left
           )}
         </Text>
-        <Text style={textStyle}>
+        <Text style={txtStyle}>
           {this.props.title}
         </Text>
-        <Text style={textStyle}>
+        <Text style={txtStyle}>
           { right && (
             this.props.right
           )}
