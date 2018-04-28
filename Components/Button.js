@@ -5,9 +5,9 @@ import styles from '../style'
 
 class Button extends Component {
   render () {
-    const { onPress, title, success, danger, neutral, rounded, disabled, left, right, ...rest } = this.props
-    const buttonStyle = [styles.defaultButton]
-    const textStyle = [styles.defaultButtonText]
+    const { onPress, title, success, danger, neutral, rounded, disabled, left, right, buttonStyle, textStyle, ...rest } = this.props
+    const buttonStyle = [styles.defaultButton, buttonStyle]
+    const textStyle = [styles.defaultButtonText, textStyle]
 
     if (success) buttonStyle.push(styles.successButton) && textStyle.push(styles.successButtonText)
     if (danger) buttonStyle.push(styles.dangerButton) && textStyle.push(styles.dangerButtonText)
